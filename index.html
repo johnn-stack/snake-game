@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#f3f5e9">
+	<title>Little Snake</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<main>
+		<header class="topline">
+			<div class="brand"><span class="brand-mark" aria-hidden="true">S</span> Little Snake</div>
+			<span class="eyebrow">A tiny garden game</span>
+		</header>
+
+		<section class="intro" aria-label="Game score">
+			<div>
+				<h1>Hungry snake.</h1>
+				<p>Eat the apple. Grow a little longer. Try not to bump into yourself.</p>
+			</div>
+			<div class="scoreboard">
+				<div class="score"><span class="score-label">Apples</span><span class="score-value" id="score">0</span></div>
+				<div class="score"><span class="score-label">Best</span><span class="score-value" id="best">0</span></div>
+			</div>
+		</section>
+
+		<section class="game-shell" aria-label="Snake game">
+			<div class="board-wrap">
+				<canvas id="board" width="660" height="480" aria-label="Snake game board"></canvas>
+				<div class="overlay" id="overlay">
+					<h2 id="overlay-title">Ready when you are</h2>
+					<p id="overlay-message">Use the arrow keys or WASD to steer.</p>
+					<button id="start-button" type="button">Start game</button>
+				</div>
+			</div>
+			<div class="controls-row">
+				<div class="hint"><strong>Steer</strong> with arrows or WASD<br><strong>Pause</strong> with space</div>
+				<div class="actions">
+					<button class="secondary" id="pause-button" type="button">Pause</button>
+					<button id="restart-button" type="button">Restart</button>
+				</div>
+			</div>
+			<div class="mobile-controls" aria-label="Touch direction controls">
+				<button type="button" data-dir="up" aria-label="Steer up">&#8593;</button>
+				<button type="button" data-dir="left" aria-label="Steer left">&#8592;</button>
+				<button type="button" data-dir="down" aria-label="Steer down">&#8595;</button>
+				<button type="button" data-dir="right" aria-label="Steer right">&#8594;</button>
+			</div>
+		</section>
+		<p class="sr-only" id="announcement" aria-live="polite"></p>
+	</main>
+
+	<script src="script.js" defer></script>
+</body>
+</html>
